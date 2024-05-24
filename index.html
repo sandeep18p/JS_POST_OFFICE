@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="container">
+         <div class="one">
+            <div class="one_1">
+            <h1 style="color: #575A85;font-weight: 700;">Post Office Application.</h1>
+            <p class="small_font_size" style="color: #B8BCCC;">
+                This Application Allows you to extract information about the nearest
+                Post Offices, based on your location.
+            </p>    
+        </div>
+            <img src="1.png">
+         </div>
+         <div class="two">
+            <div id="btn_box">
+                <p style="font-weight: 700;">Your Current IP Address is <span id="ip_span" style="color: white;"></span></p>
+                <button id="get_started_btn" class="small_font_size">Get Started</button>
+              </div>
+         </div>
+    </div> -->
+    <div class="container_2">
+        
+            <div style="font-weight: 700;">Your Current IP Address is <span id="ip_span_1" style="color: white;"></span></div>
+        
+        <div class="two_2">
+            <div class="row1">
+              <div>Lat: <span id="lat_span"></span></div>
+              <div>City: <span id="city_span"></span></div>
+              <div>Organisation: <span id="org_span"></span></div>
+            </div>
+            <div class="row2">
+              <div>Long: <span id="long_span"></span></div>
+              <div><span>Region: <span id="reg_span"></span></div>
+              <div><span>Hostname: <span id="host_span"></span></div>
+            </div>
+          </div>
+    </div>
+    <div class="container_3">
+        <h1 class="larger_font_size">Your Current Location</h1>
+      
+        <iframe
+          id="map_frame"
+          frameborder="0"
+          style="border: 0"
+        ></iframe>
+   
+    </div>
+    <div class="container_4">
+        <h1 class="larger_font_size">More Information About You</h1>
+<div id="updated_info_div">
+  <p>Time Zone: <span id="updated_tzone_span"></span></p>
+  <p>Date And Time: <span id="updated_dt_span"></span></p>
+  <p>Postal Code: <span id="updated_pin_span"></span></p>
+  <p>Message: <span>Number of postal code(s) found: <span id="updated_num_span"></span></span></p>
+</div>
+
+    </div>
+    <div class="container_5">
+        <h1>Post Offices Near You</h1>
+        <div class="search">
+            <img src="s.png" alt="">
+        <input type="text" name="" class="in">
+        
+    </div>
+        <div id="bucket">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
