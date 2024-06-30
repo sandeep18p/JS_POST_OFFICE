@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles1.css" /> -->
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="container">
+    <div class="container" id="go">
          <div class="one">
             <div class="one_1">
             <h1 style="color: #575A85;font-weight: 700;">Post Office Application.</h1>
@@ -24,7 +25,9 @@
                 <button id="get_started_btn" class="small_font_size">Get Started</button>
               </div>
          </div>
-    </div> -->
+    </div>
+    <!-- //op  -->
+     <div id="go1" class="hidden">
     <div class="container_2">
         
             <div style="font-weight: 700;">Your Current IP Address is <span id="ip_span_1" style="color: white;"></span></div>
@@ -45,7 +48,7 @@
     <div class="container_3">
         <h1 class="larger_font_size">Your Current Location</h1>
       
-        <iframe
+        <iframe 
           id="map_frame"
           frameborder="0"
           style="border: 0"
@@ -66,13 +69,14 @@
         <h1>Post Offices Near You</h1>
         <div class="search">
             <img src="s.png" alt="">
-        <input type="text" name="" class="in">
+        <input type="text" name="" class="in" id="hop">
         
     </div>
         <div id="bucket">
 
         </div>
     </div>
+<!-- </div> -->
     <script src="script.js"></script>
 </body>
 </html>

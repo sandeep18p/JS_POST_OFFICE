@@ -1,4 +1,7 @@
+
+
 async function getIP() {
+    console.log("working");
     let response = await fetch("https://api.ipify.org?format=json");
     let res = await response.json();
     console.log(res);
@@ -26,7 +29,7 @@ async function renderPostalData({postal}){
 }
 
 
-
+let arrayD;
 async function latlong() {
     let ip = await showIpAddress(); 
     let res = await fetch(`https://ipapi.co/${ip}/json/`);
@@ -36,7 +39,7 @@ async function latlong() {
     renderLocationOnMap(response);
     let arrayData=await renderPostalData(response);
     console.log(arrayData)
-    let arrayD = [...arrayData]; 
+    arrayD = [...arrayData]; 
     // return response;
     console.log(arrayD)
     showData(arrayD)
@@ -102,3 +105,33 @@ function renderInfoData(locationDetails) {
 }
 
 latlong();
+
+document.getElementById('get_started_btn').addEventListener('click', () => {
+    var go = document.getElementById('go');
+    go.classList.add('hidden');
+    var go1 = document.getElementById('go1');
+    go1.classList.remove('hidden');
+});
+
+
+function debounce(func, delay) {
+
+    let timer;
+    return function() {
+        const context = this;
+        // const args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            func.apply(context);
+        }, delay);
+    };
+}
+
+function op() {
+    console.log('asjskd')
+    let searchTerm = document.getElementById('hop').value.trim().toLowerCase();
+    let filteredData = arrayD.filter(postOffice => postOffice.Name.toLowerCase().includes(searchTerm));
+    showData(filteredData);
+}
+
+document.getElementById('hop').addEventListener('input', debounce(op, 300));
